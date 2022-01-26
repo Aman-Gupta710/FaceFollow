@@ -1,0 +1,86 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /*kuch bhi code ka result div ke bhaher na nikle*/ 
+}
+.face   /*face benane se phle ek square red box ke liye*/
+{
+    background-color: red;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /*to convert the squre into circle*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body/* to place the red box at the center of the page and also color the background*/
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: skyblue;
+}
+
+.face::before
+{    /*actually for mouth*/
+    content: "";
+    background: ghostwhite;
+    width: 50%;
+    height: 20%;
+    position: absolute;
+    top:210px;
+    border-bottom-right-radius:190px;
+    border-bottom-left-radius:190px;
+    transition: 0.5s; 
+ }   
+.face:hover::before/*to move and change the mouth action */
+{
+    top: 210px;
+    height: 8%;
+    width: 50%;
+    border-bottom-right-radius:0px;
+    border-bottom-left-radius:0px;
+    transition: 0.5s; 
+}
+
+.eyes
+{  
+	position: relative;
+	top: -40px;
+	display: flex;
+}  
+.eyes .eye
+{
+     background: #fff ;
+     width: 85px;
+     height: 85px;
+     position: relative;
+     border-radius: 50%;
+     margin: 0 15px;
+}
+.eyes .eye::before /*for eyes intereior balls*/
+{
+	content: "";
+	background: black;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 30%;
+	border-radius: 50%;
+	transform:translate(-50%,-50%) ;
+	left: 30px;
+}
+
+
+
+
+
+
+
+
+
+
